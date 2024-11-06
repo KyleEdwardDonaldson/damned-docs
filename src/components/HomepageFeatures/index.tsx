@@ -1,66 +1,85 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { GiRobe, GiTrade } from 'react-icons/gi';
+import { IconType } from 'react-icons';
+import { FaRegLightbulb } from "react-icons/fa";
+import { PiTreasureChestFill } from 'react-icons/pi';
+import { MdConveyorBelt } from 'react-icons/md';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  Icon: IconType;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Train Pilgrims',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Learn',
+    Icon: FaRegLightbulb,
     description: (
       <>
-        Fight back against the demons that roam earth by training pilgrims. Build up their strength with relics found on previous expeditions in order to take on stronger foe.
+        Learn a new programming language or reinforce your skills in this competitive, multiplayer game. Use any language you like to call each of the endpoints.
+      </>
+    ),
+  },
+  {
+    title: 'Train Pilgrims',
+    Icon: GiRobe,
+    description: (
+      <>
+        Strengthen your pilgrims with relics and prepare them for stronger foes in the wastelands.
       </>
     ),
   },
   {
     title: 'Discover Caches',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Icon: PiTreasureChestFill,
     description: (
       <>
-        Send your pilgrims out into the hellish wastelands in search of relics. Utilise the relics to become stronger, or display your most rare discoveries as trophies to other players.
+        Explore dangerous lands in search of relics. Showcase your findings and gain strength.
       </>
     ),
   },
   {
     title: 'Trade',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Icon: GiTrade,
     description: (
       <>
-        List items for sale at your colony. If another player discovers your location, they can trade with you. Find other player's colonies to engage in trade, make emergency purchases during long pilgramages.
+        Trade items with other players, build alliances, and acquire essentials for survival.
+      </>
+    ),
+  },
+  {
+    title: 'Automate',
+    Icon: MdConveyorBelt,
+    description: (
+      <>
+        Want the best loot? The chances of getting something super rare are extremely low. Automate everything, refine your processes, maximise your income.
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({ title, Icon, description }: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <div className="w-full text-center p-6">
+      <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+        <Icon className="w-full h-full" />
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
+      <Heading as="h3" className="text-xl font-semibold mb-2">{title}</Heading>
+      <p>{description}</p>
     </div>
   );
 }
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container" style={{  }}>
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+    <section className="features bg-[#2D3142] pt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+        {FeatureList.map((feature, idx) => (
+          <Feature key={idx} {...feature} />
+        ))}
       </div>
     </section>
   );

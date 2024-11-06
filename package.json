@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "GIT_USER=KyleEdwardDonaldson USE_SSH=true npm run build && docusaurus deploy",
+    "deploy": "npm run build && docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -21,12 +21,17 @@
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-icons": "^5.3.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.6.0",
     "@docusaurus/tsconfig": "3.6.0",
     "@docusaurus/types": "3.6.0",
+    "autoprefixer": "^10.4.20",
+    "daisyui": "^4.12.14",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
     "typescript": "~5.6.2"
   },
   "browserslist": {

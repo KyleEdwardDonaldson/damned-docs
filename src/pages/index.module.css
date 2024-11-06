@@ -21,3 +21,15 @@
   align-items: center;
   justify-content: center;
 }
+
+.pageBackground {
+  background-image: url('/img/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.alternateBackground {
+  background-color: #2D3142;
+}
