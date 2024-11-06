@@ -75,7 +75,7 @@ function Feature({ title, Icon, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className="features bg-[#2D3142] pt-10">
+    <section className="features bg-[#2D3142] bg-opacity-40 pt-10">
       <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-8">
         {FeatureList.map((feature, idx) => (
           <Feature key={idx} {...feature} />
