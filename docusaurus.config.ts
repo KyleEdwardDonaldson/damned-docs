@@ -64,8 +64,6 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-    // Replace with your project's social card
-    // image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Damned',
       logo: {
@@ -74,13 +72,13 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'doc',
+          docId: 'Getting Started/start', 
           position: 'left',
           label: 'Get Started with the API',
         },
       ],
-    },
+    },   
     footer: {
       style: 'dark',
       links: [
