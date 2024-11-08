@@ -17,7 +17,7 @@ function HomepageHeader() {
           <Link className="btn btn-primary mx-2 bg-[#FF5733] hover:bg-[#F52D00] hover:text-white" to="/docs/Getting%20Started/start">
             Get Started
           </Link>
-          <Link className="btn btn-primary mx-2 bg-[#5DFDCB] hover:bg-[#0DFDB1] hover:text-white" to="/docs/intro">
+          <Link className="btn btn-primary mx-2 bg-[#5DFDCB] hover:bg-[#0DFDB1] hover:text-white" to="">
             Join our Discord
           </Link>
         </div>

@@ -2,6 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import tailwindPlugin from "./plugins/tailwind-config.cjs";
+require('dotenv').config()
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -31,6 +32,11 @@ const config: Config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  customFields: {
+    'REACT_APP_STRIPE_PUBLISHABLE_KEY': "pk_test_51Ms6svHCIYRWICYOnITMt0RDSyYyAAqG38oD1SpryF3te9KWLFKcecs9N89TAgRfNpfQH6IDR2uMVUs2rXrBpSYI00yvye3NeU",
+    'REACT_APP_BACKEND_URL': "http://localhost:4000",
   },
 
   presets: [
@@ -76,6 +82,12 @@ const config: Config = {
           docId: 'Getting Started/start', 
           position: 'left',
           label: 'Get Started with the API',
+        },
+        {
+          to: '/leaderboard', label: 'Leaderboard', position: 'left'
+        },
+        {
+          to: '/founder', label: 'Become a Founder | Get More Features', position: 'right'
         },
       ],
     },   

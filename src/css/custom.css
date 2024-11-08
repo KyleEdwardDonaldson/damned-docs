@@ -36,3 +36,7 @@
 .navbar__link, .navbar__title, .navbar__logoe, .navbar__brand {
   transition: color 0.3s ease;
 }
+
+.footer--dark {
+  background-color: #1c232b;
+}
